@@ -1,6 +1,7 @@
 clear all
 addpath('./libsvm-new');
 addpath('./liblinear-2.1/matlab');
+warning off;
 %berlin--337  bauma--264  RML--720 eNT--1072
 
 clear all;
@@ -421,65 +422,3 @@ end
 myacc(1,m+1)=max_acc;
 myacc(2,m+1)=canshu;
 
-
-
-% options = [];
-% options.alfa =0.29; 
-% options.beta =720;
-% options.gamma =0.56;
-% options.T =10;
-% [acc,acc_iter,P1,P2,obj_value ] = JALDA(Xs',Ys,Xt',Yt,options );
-% Zs= P1'*Xs';
-% Zs = normalization(Zs,1);
-% Zt = P1'*Ttest';
-% Zt = normalization(Zt,1);
-% model= svmtrain(Ys,Zs','-s 0 -t 0 -c 1 -g 1 ');
-% [ Y_tar_pseudo, acc,~] = svmpredict(test_label,Zt',model);
-% 
-% X =[Zs,Zt];
-% normalization(X,1);
-% %mahalanobis  euclidean
-%    Y = tsne(X','Algorithm','exact','Distance','euclidean','NumPCAComponents',100,'NumDimensions',3);
-% %    scatter3(Y(:,1),Y(:,2),Y(:,3),[Ys;Yt],'filled');
-%    
-%    
-%    Y1=Y(1:size(Zs,2),:);
-%    Y2=Y(size(Zs,2)+1:end,:);
-%    % Plot the result
-%       figure;
-%       %subplot(2,3,1);
-%        axis([-50,50,-50,50]);
-%      % p=[Xs_label;Xt_label];
-%  %gscatter(Y(1:size(Ss,2),1),Y(1:size(Ss,2),2),Xs_label);
-%  %  hold on;
-%   %  gscatter(Y(size(Ss,2)+1:end,1),Y(size(Ss,2)+1:end,2),Xt_label);
-%      scatter3(Y1(Ys==1,1),Y1(Ys==1,2),Y1(Ys==1,3),'*','r','LineWidth',1);
-%      hold on
-%      scatter3(Y1(Ys==2,1),Y1(Ys==2,2),Y1(Ys==2,3),'*','b','LineWidth',1);
-%         hold on;
-%      scatter3(Y1(Ys==3,1),Y1(Ys==3,2),Y1(Ys==3,3),'*','g','LineWidth',1);
-%         hold on;
-%      scatter3(Y1(Ys==4,1),Y1(Ys==4,2),Y1(Ys==4,3),'*','y','LineWidth',1);
-%         hold on;
-%      scatter3(Y1(Ys==5,1),Y1(Ys==5,2),Y1(Ys==5,3),'*','m','LineWidth',1);
-%         hold on;
-% %       scatter(Y1(Xs_label==6,1),Y1(Xs_label==6,2),'*','k','LineWidth',1.5);
-% %    hold on;
-%    scatter3(Y2(Yt==1,1),Y2(Yt==1,2),Y2(Yt==1,3),'+','r','LineWidth',1);
-%      hold on
-%      scatter3(Y2(Yt==2,1),Y2(Yt==2,2),Y2(Yt==2,3),'+','b','LineWidth',1);
-%         hold on;
-%      scatter3(Y2(Yt==3,1),Y2(Yt==3,2),Y2(Yt==3,3),'+','g','LineWidth',1);
-%         hold on;
-%      scatter3(Y2(Yt==4,1),Y2(Yt==4,2),Y2(Yt==4,3),'+','y','LineWidth',1);
-%         hold on;
-%      scatter3(Y2(Yt==5,1),Y2(Yt==5,2),Y2(Yt==5,3),'+','m','LineWidth',1);
-%         hold on;
-% %       scatter(Y2(Xt_label==6,1),Y2(Xt_label==6,2),'+','k','LineWidth',1.5);
-% %       hold on;
-%         box on;
-% %       set( gca, 'XTick', [], 'YTick', [],'YTick', [],'FontSize',17,'FontWeight','bold' );
-% %legend('DGTSC(graph)','DGTSC');
-%     view(-20,20);
-%   % xlabel('(a) Original data');
-% %     xlabel('(b) JALDA');
