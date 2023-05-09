@@ -1,2 +1,18 @@
-# CDSA-[Coupled-Discriminant-Subspace-Alignment](https://www.isca-speech.org/archive/pdfs/interspeech_2022/li22_interspeech.pdf)
-The code of the paper "Coupled Discriminant Subspace Alignment for Cross-corpus Speech Emotion Recognition"
+# CDSA
+# The code of the paper "Coupled Discriminant Subspace Alignment for Cross-corpus Speech Emotion Recognition" (Published in INTERSPEECH 2022, poster, [PDF](https://www.isca-speech.org/archive/pdfs/interspeech_2022/li22_interspeech.pdf))
+
+If you find our work helpful, please cite by
+
+@article{li2022coupled,
+
+  title={Coupled Discriminant Subspace Alignment for Cross-database Speech Emotion Recognition},
+  
+  author={Li, Shaokai and Song, Peng and Zhao, Keke and Zhang, Wenjing and Zheng, Wenming},
+  
+  journal={Proc. Interspeech 2022},
+  
+  pages={4695--4699},
+  
+  year={2022}
+  
+}
